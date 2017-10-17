@@ -36,6 +36,10 @@ const images = {
   logo: require("../assets/bttf.svg"),
   fine: require("../assets/thisisfine.gif"),
   future: require("../assets/future.gif"),
+  greet: require("../assets/greet.gif"),
+  add: require("../assets/add.gif"),
+  clock: require("../assets/clock.gif"),
+  cuando: require("../assets/cuando.gif"),
   gitscm: require("../assets/git-scm.com-.png"),
 };
 
@@ -83,7 +87,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <List>
             <Appear>
-              <ListItem>Una maquina del tiempo</ListItem>
+              <ListItem>El DeLorean</ListItem>
             </Appear>
             <Appear>
               <ListItem>Un sistema de control versiones</ListItem>
@@ -137,9 +141,9 @@ export default class Presentation extends React.Component {
           <Appear>
             <List textColor="white">
               <ListItem>¿Cómo instalar git?</ListItem>
+              <ListItem>Flujo básico de git</ListItem>
               <ListItem>Como usar git localmente</ListItem>
               <ListItem>GitHub</ListItem>
-              <ListItem>Flujo básico de git</ListItem>
               <ListItem>Comandos fundamentales</ListItem>
               <ListItem>Viajar en el tiempo y cambiar la historia</ListItem>
             </List>
@@ -183,8 +187,79 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary">
-            <Image src={images.future} />
+          <Image src={images.future} />
         </Slide>
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+          <Appear>
+            <Heading size={3}>Pero antes</Heading>
+          </Appear>
+          <Appear>
+            <div>
+              <Image src={images.greet} />
+              <Text textColor="white">Seamos educados.<br />Hay que presentarnos con git</Text>
+            </div>
+          </Appear>
+          <Appear>
+            <List textColor="white">
+              <ListItem>Decirle nuestro nombre</ListItem>
+              <ListItem>Decirle nuestro correo electrónico</ListItem>
+            </List>
+          </Appear>
+        </Slide>
+        <Slide transition={["flip"]} bgColor="secondary">
+          <Heading size={3} textColor="white">Ahora si</Heading>
+          <Image src={images.future} />
+        </Slide>
+        <Slide transition={["slide zoom"]} bgColor="tertiary">
+          <Appear>
+            <Heading size={6} textColor="white">Creando un repositorio</Heading>
+          </Appear>
+          <Appear>
+            <Heading size={3} textColor="quaternary">¿Que es un repositorio?</Heading>
+          </Appear>
+          <Appear>
+            <Text textColor="white">Un repositorio es un sitio centralizado donde se almacena y mantiene información.</Text>
+          </Appear>
+          <Appear>
+            <Heading size={3} textColor="primary" caps>Centralizado</Heading>
+          </Appear>
+        </Slide>
+        <Slide transition={["slide fade"]} bgColor="secondary">
+          <Heading size={6} textColor="white">Añadiendo archivos</Heading>
+          <Image src={images.add} />
+        </Slide>
+        <Slide transition={["flip"]} bgColor="tertiary" textColor="white">
+          <Heading size={4} textColor="primary">commit</Heading>
+          <Text textColor="white">
+            <p>Git funciona mediante <i>commits</i>.<i>Commit</i> es una palabra complicada.</p>
+            <p>La mejor interpretación seria como: <i>consignar</i>, <i>acometer</i> o <i>comprometer</i></p>
+            <p>Asi que estamos consignando/comprometiendo cambios de contenido 👽.</p>
+          </Text>
+          <Heading size={6} textColor="quartenary">No suena bonito pero así es 💡.</Heading>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="quartenary" textColor="tertiary">
+          <Heading size={1}>Flujo de trabajo</Heading>
+          <Heading size={6}>Añadir</Heading>
+          <Heading size={6}>Stage ➡️ Seleccionar</Heading>
+          <Heading size={6}>Commit ➡️ Consignar</Heading>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary" textColor="tertiary">
+          <Heading size={1} textColor="ternary">Log</Heading>
+          <Image src={images.clock} />
+          <Heading size={3} textColor="quarternary">Registro de cambios</Heading>
+        </Slide>
+        <Slide transition={["slide"]} bgColor="secondary" textColor="white">
+          <Heading size={3} textColor="ternary">¡Pero cuando viajamos en el tiempo!</Heading>
+          <Image src={images.cuando} />
+        </Slide>
+        <Slide transition={["slide"]} bgColor="tertiary" textColor="primary">
+          <Heading size={4} textColor="primary">checkout y ramas</Heading>
+          <Text textColor="white">
+            <p><strong>checkout</strong> es una utilidad de git que es nuestro primer <i>DeLorean</i> (al comienzo de usar git, despues encontraremos otros más). </p>
+            <p>Checkout nos permite viajar en el tiempo entre "commits", crear ramas, cambiarnos de rama, traer archivos en el tiempo y mucho más.</p>
+          </Text>
+        </Slide>
+        
       </Deck>
     );
   }
