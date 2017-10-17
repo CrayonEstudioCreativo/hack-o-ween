@@ -40,7 +40,11 @@ const images = {
   add: require("../assets/add.gif"),
   clock: require("../assets/clock.gif"),
   cuando: require("../assets/cuando.gif"),
+  consola: require("../assets/consola.gif"),
+  wash: require("../assets/wash.gif"),
   gitscm: require("../assets/git-scm.com-.png"),
+  distribuido: require("../assets/centralized.png"),
+  github: require("../assets/github.com-explore.png"),
 };
 
 preloader(images);
@@ -145,7 +149,6 @@ export default class Presentation extends React.Component {
               <ListItem>Como usar git localmente</ListItem>
               <ListItem>GitHub</ListItem>
               <ListItem>Comandos fundamentales</ListItem>
-              <ListItem>Viajar en el tiempo y cambiar la historia</ListItem>
             </List>
           </Appear>
         </Slide>
@@ -210,7 +213,7 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="white">Ahora si</Heading>
           <Image src={images.future} />
         </Slide>
-        <Slide transition={["slide zoom"]} bgColor="tertiary">
+        <Slide transition={["slide", "zoom"]} bgColor="tertiary">
           <Appear>
             <Heading size={6} textColor="white">Creando un repositorio</Heading>
           </Appear>
@@ -224,7 +227,7 @@ export default class Presentation extends React.Component {
             <Heading size={3} textColor="primary" caps>Centralizado</Heading>
           </Appear>
         </Slide>
-        <Slide transition={["slide fade"]} bgColor="secondary">
+        <Slide transition={["slide", "fade"]} bgColor="secondary">
           <Heading size={6} textColor="white">Añadiendo archivos</Heading>
           <Image src={images.add} />
         </Slide>
@@ -252,14 +255,65 @@ export default class Presentation extends React.Component {
           <Heading size={3} textColor="ternary">¡Pero cuando viajamos en el tiempo!</Heading>
           <Image src={images.cuando} />
         </Slide>
-        <Slide transition={["slide"]} bgColor="tertiary" textColor="primary">
+        <Slide transition={["flip"]} bgColor="tertiary" textColor="primary">
           <Heading size={4} textColor="primary">checkout y ramas</Heading>
           <Text textColor="white">
             <p><strong>checkout</strong> es una utilidad de git que es nuestro primer <i>DeLorean</i> (al comienzo de usar git, despues encontraremos otros más). </p>
             <p>Checkout nos permite viajar en el tiempo entre "commits", crear ramas, cambiarnos de rama, traer archivos en el tiempo y mucho más.</p>
           </Text>
         </Slide>
-        
+        <Slide transition={["slide", "flip"]} bgColor="secondary" textColor="white">
+          <Appear>
+            <div>
+              <Heading size={3} textColor="ternary">Lave, enjuague y repita</Heading>
+              <Image src={images.wash} />
+            </div>
+          </Appear>
+          <Appear>
+            <List textColor="white">
+              <ListItem>Edite sus archivos</ListItem>
+              <ListItem>Revise y añada sus cambios</ListItem>
+              <ListItem>Consigne sus cambios</ListItem>
+            </List>
+          </Appear>
+        </Slide>
+        <Slide transition={["zoom", "flip"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="white">Sorpresa</Heading>
+          <Text textColor="white">
+            <p>git no es <strong>centralizado</strong>.</p>
+          </Text>
+        </Slide>
+        <Slide transition={["zoom", "flip"]} bgColor="secondary" textColor="tertiary">
+          <Heading size={3} textColor="white">Distribuido</Heading>
+          <Image src={images.distribuido} width="80%" />
+        </Slide>
+        <Slide transition={["flip", "fade"]} bgColor="secondary" textColor="tertiary">
+          <Link href="https://github.com" target="_blank" textColor="white">
+            <Heading size={3} textColor="ternary">github.com</Heading>
+          </Link>
+          <Text textColor="white">
+            <p>Posiblemente el mayor nodo de distribución de repositorios git en el mundo.</p>
+          </Text>
+          <Image src={images.github} width="80%" />
+        </Slide>
+        <Slide transition={["zoom", "flip"]} bgColor="tertiary" textColor="primary">
+          <Heading size={3} textColor="primary">Clonar</Heading>
+          <Text textColor="white">
+            <p>Clonar un proyecto no es mas que conseguir una copia identica del repositorio, incluyendo toda la historia de cambios y ramas.</p>
+          </Text>
+        </Slide>
+        <Slide transition={["slide", "flip"]} bgColor="quartenary" textColor="tertiary">
+          <Heading size={3} textColor="tertiary">Remotos</Heading>
+          <Text textColor="tertiary">
+            <p>Un remoto es un espacio en la <i>nube</i> que nos permite subir nuestro código y trabajar colaborativamente.</p>
+          </Text>
+        </Slide>
+        <Slide transition={["zoom", "flip"]} bgColor="primary" textColor="tertiary">
+          <Heading size={3} textColor="tertiary">Extendido</Heading>
+          <Heading size={5} textColor="white">GIT desde la consola</Heading>
+          <Heading size={6} textColor="tertiary">Contenido para geeks 😎</Heading>
+          <Image src={images.consola}/>
+        </Slide>
       </Deck>
     );
   }
