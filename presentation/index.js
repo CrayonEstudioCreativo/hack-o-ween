@@ -120,11 +120,11 @@ export default class Presentation extends React.Component {
                 Advertencia
               </Heading>
               <Heading size={5} textColor="white" caps>
-                Esta más que una platica es un <strong>taller</strong>
+                Esto, más que una platica es un <strong>taller</strong>.
               </Heading>
               <Heading size={6} textColor="white" caps>
-                En los talleres se construyen cosas <br />
-                Vamos a construir cosas 🔨👾
+                En los talleres se construyen cosas, <br />
+                ¡Vamos a construir cosas 🔨👾!
               </Heading>
             </div>
           </Appear>
@@ -133,7 +133,7 @@ export default class Presentation extends React.Component {
           <Appear>
             <div>
               <Heading size={1} textColor="secondary" caps>
-                ¿Que vamos a hacer?
+                ¿Qué vamos a hacer?
               </Heading>
               <Image src={images.what} />
             </div>
@@ -148,7 +148,7 @@ export default class Presentation extends React.Component {
           <Appear>
             <div>
               <Heading size={1} textColor="secondary" caps>
-                ¿Que vamos a necesitar
+                ¿Qué vamos a necesitar
               </Heading>
               <Image src={images.ingredients} />
             </div>
@@ -172,12 +172,12 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Heading size={6} textColor="white" caps>
-              ¿Que vamos a ver?
+              ¿Qué vamos a ver?
             </Heading>
           </Appear>
           <Appear>
             <List textColor="white">
-              <ListItem>¿Que es webpack?</ListItem>
+              <ListItem>¿Qué es webpack?</ListItem>
               <ListItem>Bundling !== minification</ListItem>
               <ListItem>Javascript</ListItem>
               <ListItem>Node / NPM / Yarn</ListItem>
@@ -188,7 +188,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["zoom"]} bgColor="secondary" textColor="tertiary">
           <Appear>
-            <Heading size={3}>¿Que webpack?</Heading>
+            <Heading size={3}>¿Qué es webpack?</Heading>
           </Appear>
           <Appear>
             <div>
@@ -226,7 +226,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Heading size={6} textColor="primary">
-              Realizar conjuntos de código comun entre multiples páginas.
+              Realizar conjuntos de código comun entre múltiples páginas.
             </Heading>
           </Appear>
         </Slide>
@@ -238,7 +238,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Heading size={6} textColor="primary">
-              Comprimir, ofuscar y reducir el código para que sea mas "ligero".
+              Comprimir, ofuscar y reducir el código para que sea más "ligero".
             </Heading>
           </Appear>
         </Slide>
