@@ -7,8 +7,8 @@
         "clean": "rimraf dist",
         "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
         "lint": "eslint --ext .js,.jsx .",
-        "deploy": "npm run clean & npm run build",
-        "surge": "surge -p .",
+        "deploy": "yarn run clean & yarn run build && yarn run surge",
+        "surge": "surge -p . -d crayon-hack-o-ween.surge.sh",
         "start": "cross-env NODE_ENV=development node server.js"
     },
     "author": "",

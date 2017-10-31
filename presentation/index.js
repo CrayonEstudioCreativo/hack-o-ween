@@ -226,7 +226,7 @@ export default class Presentation extends React.Component {
           </Appear>
           <Appear>
             <Heading size={6} textColor="primary">
-              Realizar conjuntos de código comun entre múltiples páginas.
+              Realizar conjuntos de código común entre múltiples páginas.
             </Heading>
           </Appear>
         </Slide>
